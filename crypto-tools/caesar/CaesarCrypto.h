@@ -1,7 +1,13 @@
-//
-// Created by Mike Bogdan on 2/10/15.
-// Copyright (c) 2015 Mike Bohdan. All rights reserved.
-//
+/*
+ * Created by Mike Bogdan on 2/10/15.
+ * Copyright (c) 2015 Mike Bohdan. All rights reserved.
+ *
+ * This class implements algorithm of Caesar cipher.
+ * You can choose key while creating new object.
+ * By default key value is equal 7.
+ * I use unicode table as an alphabet.
+ *
+ */
 
 
 #ifndef __CesarCrypto_H_
@@ -14,7 +20,10 @@ class CaesarCrypto : AbstractCrypto {
 
 public:
 
-    CaesarCrypto(int key) : AbstractCrypto(key) {
+    CaesarCrypto() : AbstractCrypto() {
+    }
+
+    CaesarCrypto(int const KEY) : AbstractCrypto(KEY) {
     }
 
     virtual std::string Encrypt(std::string text) const override {
